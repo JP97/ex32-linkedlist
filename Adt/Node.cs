@@ -8,13 +8,15 @@ namespace Adt
 {
 	public class Node
 	{
+		private object data;
 
-		public Node Data { get; set; }
+		public Node Next { get; set; }
+		public object Data { get; set; }
 
 
-		//public Node(Node n)
-		//{
-
-		//}
+		public Node(object o)
+		{
+			data = Data;
+		}
 	}
 }
