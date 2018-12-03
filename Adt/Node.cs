@@ -9,6 +9,7 @@ namespace Adt
 	public class Node
 	{
 		private object data;
+		private Node next;
 
 		public Node Next { get; set; }
 		public object Data { get; set; }
@@ -17,6 +18,7 @@ namespace Adt
 		public Node(object o)
 		{
 			data = Data;
+			
 		}
 	}
 }

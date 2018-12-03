@@ -10,7 +10,9 @@ namespace Adt
 	{
 		private int count;
 
+
 		public int Count { get {return this.count; } set {this.count = value; } }
+		public Node Head;
 
 
 
@@ -21,6 +23,37 @@ namespace Adt
 
 		public void Insert(object m, int b)
 		{
+			Node n = new Node(m);
+			// 1) tom 
+			// index 0 
+			switch (b)
+			{
+				case 0:
+					n.Next = Head;
+					Head = n;
+					break;
+
+				//2) insert i midten
+				// vis index er mellem 0 og antallet af listen
+				case b.count:
+
+					break;
+
+				//3) slutingen af listen
+				// index er antallet af listen plus 1
+				case default:
+					Node temp = Head;
+					for (int i = 0; i < b - 1; i++)
+					{
+						temp = temp.Next;
+					}
+
+					n.Next = temp.Next;
+					temp = n;
+
+					break;
+			}
+			count++;
 			throw new NotImplementedException();
 		}
 
